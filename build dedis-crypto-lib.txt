@@ -1,0 +1,14 @@
+add libraries from maven 
+Maven: org.bouncycastle:bcprov-jdk15on:1.64
+Maven: com.google.protobuf:protobuf-java:3.13.0
+Maven: net.i2p.crypto:eddsa:0.2.0
+Maven: org.slf4j:slf4j-api:1.7.25
+put in ch.epfl.dedis.lib (from https://github.com/dedis/cothority/tree/main/external/java/src/main/java/ch/epfl/dedis/lib)
+- Hex.java
+- crypto package
+- exception package
+- proto package
+configure & build artifact
+run (replace <jar file name>.jar) : 
+zip -d <jar file name>.jar META-INF/*.RSA META-INF/*.DSA META-INF/*.SF
+example of usage : https://github.com/dedis/cothority/blob/main/external/java/src/test/java/ch/epfl/dedis/lib/crypto/Ed25519Test.java
